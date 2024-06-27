@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        int n = 9;
-        for (int i = 0; i <= n; i++) System.out.println(fibonacci(i));
-    }
-    private static int fibonacci(int num) {
-        if (num <= 1) return num;
-        return fibonacci(num - 1) + fibonacci(num - 2);
+        int n = sc.nextInt();
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = n; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = i; j >= 1; j--) {
+                System.out.print(" " + j);
+            }
+            System.out.println();
+        }
     }
 }
-
-
